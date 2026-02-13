@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine Special</title>
+
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- BACKGROUND VIDEO -->
+<video autoplay muted loop id="bgVideo">
+    <source src="background.mp4" type="video/mp4">
+</video>
+
+<!-- BACKSOUND -->
+<audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="overlay">
+
+    <!-- STORY SECTION -->
+    <div class="story" id="storySection">
+        <div class="story-box">
+            <h1 id="storyText"></h1>
+            <button id="nextBtn">Next ❤️</button>
+        </div>
+    </div>
+
+    <!-- GALLERY SECTION -->
+    <div class="gallery hidden" id="gallerySection">
+        <h2 class="gallery-title">Kenangan Kita 💕</h2>
+        <div class="gallery-grid" id="gallery"></div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

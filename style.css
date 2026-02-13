@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    color: white;
+}
+
+/* BACKGROUND VIDEO */
+#bgVideo {
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* DARK OVERLAY */
+.overlay {
+    background: rgba(0, 0, 0, 0.6);
+    min-height: 100vh;
+}
+
+/* STORY FULLSCREEN CENTER */
+.story {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* GLASS EFFECT BOX */
+.story-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 50px 40px;
+    border-radius: 25px;
+    text-align: center;
+    max-width: 600px;
+    animation: fadeScale 1s ease forwards;
+}
+
+/* TEXT STYLE */
+#storyText {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2em;
+    line-height: 1.6;
+    letter-spacing: 1px;
+    text-shadow: 0 0 15px rgba(255, 100, 150, 0.8);
+    margin-bottom: 30px;
+    min-height: 100px;
+}
+
+/* BUTTON */
+button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #ff4e88, #ff1f6b);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* GALLERY */
+.hidden {
+    display: none;
+}
+
+.gallery {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.gallery-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-shadow: 0 0 15px rgba(255, 100, 150, 0.8);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 20px;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(255, 0, 100, 0.6);
+}
+
+/* HEART ANIMATION */
+.heart {
+    position: fixed;
+    color: red;
+    font-size: 20px;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-10vh); opacity: 1; }
+    100% { transform: translateY(100vh); opacity: 0; }
+}
+
+@keyframes fadeScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
